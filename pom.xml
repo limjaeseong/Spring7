@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <maven.compiler.release>8</maven.compiler.release>
+    <!--<maven.compiler.release>8</maven.compiler.release>-->
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
   </properties>
 
@@ -53,6 +53,12 @@
       <artifactId>mybatis-spring</artifactId>
       <version>3.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <build>
     <finalName>Spring7</finalName>
@@ -62,7 +68,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <release>${maven.compiler.release}</release>
+          <source>1.8</source>
+          <target>1.8</target>
+          <verbose>true</verbose>
+          <!--          <release>${maven.compiler.release}</release>-->
         </configuration>
       </plugin>
 
