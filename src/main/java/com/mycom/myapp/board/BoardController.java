@@ -14,7 +14,7 @@ public class BoardController {
     @Autowired
     BoardServiceImpl boardService;
 
-    @RequestMapping(value="/list", method = org.springframework.web.bind.annotation.RequestMethod.GET)
+    @RequestMapping(value="/list", method = RequestMethod.GET)
     public String boardlist(Model model) {
         model.addAttribute("list",boardService.getBoardList());
         return "list";
